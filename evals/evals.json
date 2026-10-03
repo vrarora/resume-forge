@@ -1,0 +1,60 @@
+{
+  "skill_name": "resume-forge",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "can you redo my resume? im a backend engineer, 5 yrs, want staff eng roles at fintechs (remote, US). heres my current one:\n\nPriya Nair | priya@example.com\nSoftware Engineer II, Lumen Pay (2022-now): responsible for payments service, worked on migration to kubernetes, helped onboard new hires, leveraged kafka for events\nSoftware Engineer, Brightcart (2020-2022): built checkout APIs, on-call\nB.Tech CS, NIT Trichy\n\nIf you need to interview me, use these answers: the k8s migration cut infra cost 35% over 6 months and I led it with 3 engineers. payments service handles ~$40M/month, I cut p99 latency from 900ms to 250ms in Q2 2025. I mentored 4 new hires, 2 got promoted. Brightcart checkout API went from 2% to 0.4% error rate after my retry redesign. Nothing confidential except client names. Builder tone is fine.",
+      "expected_output": "An ATS PDF, a designed PDF and a DOCX in resume/<variant>/, plus facts.md and playbook.md. One page, impact-first bullets, no banned words, Letter page size for US, no claim of a Staff title.",
+      "files": [],
+      "assertions": [
+        "Produces an ATS-style PDF",
+        "No banned filler words",
+        "At least 80% of bullets open with a result verb or number",
+        "No summary/profile/objective section",
+        "Designed PDF produced",
+        "DOCX produced",
+        "facts.md traces claims to sources",
+        "One page",
+        "US Letter page size for a US search",
+        "Key metrics kept (35%, 250ms, 0.4%)",
+        "Does not list Staff as a held title"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "I'm an ICU nurse in Kerala with 7 years experience and I'm applying to NHS band 6 roles in the UK. Can you make my CV right for the UK? Use these facts if you need to ask: 7 yrs ICU at Aster Medcity (2018-now), 22-bed ICU, charge nurse on night shift since 2022 leading 6 nurses, reduced central-line infections from 4 to 1 per 1000 line-days in 2023 by running a bundle audit, trained 30 nurses on ventilator care, NMC registration in progress, IELTS 8.0, BSc Nursing from Govt College of Nursing Kottayam. Keep the tone measured, not salesy.",
+      "expected_output": "A UK-style CV on A4 in measured tone, with NMC and IELTS status visible, impact-first bullets, a plain-language description of the hospital, and a playbook noting UK NHS norms.",
+      "files": [],
+      "assertions": [
+        "Produces an ATS-style PDF",
+        "No banned filler words",
+        "At least 80% of bullets open with a result verb or number",
+        "No summary/profile/objective section",
+        "Designed PDF produced",
+        "DOCX produced",
+        "facts.md traces claims to sources",
+        "A4 page size for UK",
+        "Two pages or fewer",
+        "NMC status and IELTS score shown",
+        "Infection-rate metric kept with its unit"
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "make two resume versions for me, one for account executive roles and one for sales manager roles. I'm currently a senior AE at a SaaS company (Rippling-like HR software), 6 years in sales. Facts: closed $3.2M new ARR in FY25 at 128% of quota, ranked #2 of 40 AEs, avg deal size grew from $48k to $71k after I built a multi-thread playbook the team adopted, ran onboarding for 5 new AEs. Before that SDR then AE at a smaller startup 2019-2021, booked 240 meetings in year one. Don't name my current company, call it 'an HR software company'.",
+      "expected_output": "Two variant folders (account-executive/ and sales-manager/), each with ATS and designed PDFs. The manager version leads with team and enablement signals, the AE version leads with closed ARR. The company name is hidden in both.",
+      "files": [],
+      "assertions": [
+        "Two separate role versions produced",
+        "Current employer name hidden",
+        "No banned filler words",
+        "Quota and ARR numbers kept",
+        "Manager version shows onboarding/enablement",
+        "Variants lead with different first bullets",
+        "One page per PDF",
+        "Designed PDF produced",
+        "facts.md traces claims to sources"
+      ]
+    }
+  ]
+}

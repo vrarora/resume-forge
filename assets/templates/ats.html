@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>First Last Resume</title>
+<!--
+  ATS template. One column, text-only, parses in reading order.
+  Copy to resume/<variant>/resume.html and replace every placeholder.
+  Fonts load from resume/fonts/ (copy assets/fonts there once).
+  Page size: A4 for India/UK/EU/AU, Letter for US/CA.
+-->
+<style>
+  @font-face { font-family: "GeistStatic"; src: url("../fonts/Geist-400.ttf"); font-weight: 400; }
+  @font-face { font-family: "GeistStatic"; src: url("../fonts/Geist-500.ttf"); font-weight: 500; }
+  @page { size: A4; margin: 16mm 17mm 14mm; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: "GeistStatic", "Inter", "Helvetica Neue", Arial, sans-serif;
+    font-size: 9.4pt;
+    line-height: 1.42;
+    color: #1a1a1a;
+  }
+  a { color: inherit; text-decoration: underline; text-decoration-color: #b5b5b5; text-underline-offset: 1.5pt; text-decoration-thickness: 0.5pt; }
+
+  h1 { font-size: 21pt; font-weight: 400; letter-spacing: -0.4pt; line-height: 1.1; }
+  .headline { font-size: 10.5pt; color: #6b6b6b; margin-top: 3pt; }
+  .contact { font-size: 8.6pt; color: #6b6b6b; margin-top: 7pt; }
+
+  h2 { font-size: 9.2pt; font-weight: 500; color: #111; margin: 15pt 0 6pt; }
+  .contact + h2 { margin-top: 18pt; }
+
+  .job { margin-bottom: 9pt; }
+  .row { display: flex; justify-content: space-between; align-items: baseline; gap: 12pt; }
+  .co { font-weight: 500; font-size: 10.6pt; color: #111; }
+  .meta { color: #6b6b6b; font-size: 8.6pt; white-space: nowrap; }
+  .context { color: #6b6b6b; font-size: 8.6pt; margin-top: 0.5pt; }
+  .title { color: #555; font-weight: 400; }
+  .titles { margin-top: 4pt; }
+
+  ul { list-style: none; margin: 3pt 0 0; }
+  li { position: relative; padding-left: 9pt; margin-bottom: 2.4pt; }
+  li::before { content: "•"; position: absolute; left: 0; color: #8a8a8a; }
+
+  .awards { color: #6b6b6b; font-size: 8.6pt; margin-top: 4pt; }
+  .compact p { margin-bottom: 1.5pt; }
+  .compact .title { color: #1a1a1a; font-weight: 500; }
+  .label { font-weight: 500; color: #111; margin-right: 3pt; }
+  .small { font-size: 8.8pt; }
+</style>
+</head>
+<body>
+
+<h1>Alex Rivera</h1>
+<!-- Real title · domain · spike. Never a title the person hasn't held. -->
+<p class="headline">Operations Manager · Supply Chain · Process Automation</p>
+<p class="contact">City | alex@example.com | +1 555 010 0199 | <a href="https://example.com">Portfolio</a> | <a href="https://www.linkedin.com/in/example">LinkedIn</a></p>
+
+<h2>Experience</h2>
+
+<!-- Employer with a promotion: one block, each title with its own dates and bullets. -->
+<div class="job">
+  <div class="row"><span class="co">Company One</span><span class="meta">City | Mar 2023 – Present</span></div>
+  <p class="context">One-line context for readers who don't know the company.</p>
+  <div class="row titles"><span class="title">Senior Operations Manager</span><span class="meta">Apr 2025 – Present</span></div>
+  <ul>
+    <li>Cut order-to-delivery time from 6 days to 2 by redesigning warehouse slotting across 3 sites.</li>
+    <li>Saved $1.4M a year by renegotiating carrier contracts with volume tiers.</li>
+  </ul>
+  <div class="row titles"><span class="title">Operations Manager</span><span class="meta">Mar 2023 – Apr 2025</span></div>
+  <ul>
+    <li>Lifted on-time shipments from 82% to 97% within 6 months by introducing daily exception reviews.</li>
+  </ul>
+  <p class="awards">Award: Operator of the Year, 2024</p>
+</div>
+
+<!-- Employer with one title. -->
+<div class="job">
+  <div class="row"><span class="co">Company Two</span><span class="meta">City | Jan 2020 – Feb 2023</span></div>
+  <p class="context">One-line context.</p>
+  <div class="row titles"><span class="title">Operations Analyst</span><span class="meta"></span></div>
+  <ul>
+    <li>Cut stock-outs 40% in one year by building a reorder model the buying team adopted.</li>
+  </ul>
+</div>
+
+<!-- Optional. Only if it shows range or traction the jobs don't. -->
+<div class="job">
+  <div class="row"><span class="co">Independent projects</span><span class="meta">2024 – Present</span></div>
+  <ul>
+    <li>Result first, then what was built.</li>
+  </ul>
+</div>
+
+<h2>Education</h2>
+<div class="row"><span><span class="label" style="margin-right:0">University Name</span>, Degree, Field</span><span class="meta">Honours or GPA</span></div>
+
+<h2>Skills</h2>
+<div class="compact small">
+  <p><span class="label">Group</span> Concrete skills the person can defend in an interview</p>
+  <p><span class="label">Tools</span> Tool, Tool, Tool</p>
+</div>
+
+</body>
+</html>
