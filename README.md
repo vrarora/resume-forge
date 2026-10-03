@@ -1,10 +1,11 @@
 # resume-forge
 
-[![Claude Code skill](https://img.shields.io/badge/Claude%20Code-skill-D97757)](https://claude.com/claude-code)
+[![Agent Skill](https://img.shields.io/badge/Agent%20Skill-SKILL.md-D97757)](https://agentskills.io)
+[![Works with](https://img.shields.io/badge/works%20with-Claude%20Code%20%C2%B7%20Codex%20%C2%B7%20Gemini%20CLI%20%C2%B7%20Cursor%20%C2%B7%20Copilot-555)](#install)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![Any field](https://img.shields.io/badge/works%20for-any%20field-2ea44f)](#how-it-works)
 
-A Claude Code skill that builds your resume the way a good career coach would. It researches your market, interviews you until every claim is verified, writes impact-first bullets, checks its own drafts, and renders the files you need. It works for any field.
+An agent skill that builds your resume the way a good career coach would. It researches your market, interviews you until every claim is verified, writes impact-first bullets, checks its own drafts, and renders the files you need. It works for any field.
 
 ## What you get
 
@@ -30,15 +31,32 @@ Targeting more than one role? It builds a separate set for each, in its own fold
 
 ## Install
 
+resume-forge uses the open [Agent Skills](https://agentskills.io) format, a folder with a `SKILL.md`, so any agent that supports skills can load it.
+
+**Codex, Gemini CLI, Cursor, GitHub Copilot and other agents that read the shared folder**
+
+```bash
+git clone https://github.com/vrarora/resume-forge.git ~/.agents/skills/resume-forge
+```
+
+**Claude Code**
+
 ```bash
 git clone https://github.com/vrarora/resume-forge.git ~/.claude/skills/resume-forge
 ```
 
-Then, in Claude Code, type `/resume-forge`, or just say "help me with my resume".
+If you use several agents, clone it once to `~/.agents/skills/` and link it into the others instead of copying it. For example, `ln -s ~/.agents/skills/resume-forge ~/.claude/skills/resume-forge`.
+
+**Agents without skill support**
+
+Clone it anywhere and tell your agent "Read resume-forge/SKILL.md and follow it to rebuild my resume."
+
+Then just say "help me with my resume". You can also invoke it by name, as `/resume-forge` in Claude Code or `$resume-forge` in Codex.
 
 ### Requirements
 
-- [Claude Code](https://claude.com/claude-code)
+- An AI agent that can read files and run shell commands, such as Claude Code, Codex, Gemini CLI, Cursor or GitHub Copilot
+- Web access for the research step (optional, but much better)
 - Chrome, Chromium or Edge, for rendering PDFs
 - Python 3
 - `pip install python-docx`, for DOCX output

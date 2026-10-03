@@ -5,7 +5,7 @@ The interview turns a person's memory into verified facts. Old resumes describe 
 ## How to ask
 
 - **Use rounds.** One round is at most 4 multiple-choice questions, or about 12 numbered fact questions grouped by role. Put the questions that block drafting first.
-- **Use multiple choice (AskUserQuestion) for decisions**, such as market, target role, positioning, tone and outputs. Explain every option in its description, so the person never has to ask what an option means. Put the recommended option first and mark it "(Recommended)".
+- **Use multiple choice for decisions**. Use your agent's question tool if it has one, otherwise a short numbered list of options. Ask this way for decisions such as market, target role, positioning, tone and outputs. Explain every option in its description, so the person never has to ask what an option means. Put the recommended option first and mark it "(Recommended)".
 - **Use plain numbered questions for facts.** Short answers are fine. Say that answering in any order is fine.
 - **Use what you already read.** Quote the case study or post you're asking about, for example "Your onboarding case study says activation rose to 40%. Over how many sign-ups?"
 - **Advise when research answers the question.** If the person says "not sure, advise me", give a clear recommendation with the reason.

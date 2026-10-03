@@ -1,8 +1,8 @@
 # Research Guide
 
-Run two research subagents in the background as soon as you know the person's field, level and target role. Start the interview while they work. Fill in the bracketed parts of each prompt.
+Run two research passes as soon as you know the person's field, level and target role. If your agent can run subagents or background tasks, hand each prompt to one and start the interview while they work. Otherwise, run the two passes yourself, in order. Fill in the bracketed parts of each prompt.
 
-## Agent 1: market
+## Pass 1: market
 
 ```
 Research the [YEAR] job market for a [CURRENT TITLE] with ~[N] years of experience in [FIELD/DOMAIN], based in [LOCATION], targeting [TARGET ROLE(S)] in [MARKETS: local / remote-global / relocation to X].
@@ -17,7 +17,7 @@ Use web search. Report concisely, with source URLs:
 Keep it under ~900 words. No filler.
 ```
 
-## Agent 2: resume practice for this field and level
+## Pass 2: resume practice for this field and level
 
 ```
 Research resume best practices for [TARGET ROLE] in [FIELD], [YEAR]. Prefer hiring managers, recruiters and practitioners over SEO content farms.
@@ -32,7 +32,7 @@ Cover these, with sources:
 End with a "Rules to apply" checklist. Keep it under ~1000 words.
 ```
 
-If the person names a source they trust, such as a recruiter's post or a thread, add it to agent 2's prompt as required reading.
+If the person names a source they trust, such as a recruiter's post or a thread, add it to pass 2's prompt as required reading.
 
 ## playbook.md template
 

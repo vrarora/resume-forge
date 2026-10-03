@@ -41,9 +41,9 @@ Ask for whatever exists. That usually means the current resume, a LinkedIn URL, 
 - Portfolios often hide text behind animations. Look for a reader mode or plain-text view, and read every case study. Case studies hold the numbers that never made the resume.
 - Start `facts.md` as you read. Read `references/interview.md` for its format. Log every discrepancy between sources, such as different end dates or titles, so you can ask about each one.
 
-### 2. Research, in the background
+### 2. Research the field
 
-Launch two research subagents while you start the interview. One covers the market and one covers resume practice. Read `references/research.md` for their prompts. Research every field fresh. Advice for designers does not transfer to nurses or sales leaders. Merge the findings into `playbook.md` and tell the person the few findings that change how you'll write.
+Run two research passes, one on the market and one on resume practice. Read `references/research.md` for the prompts. If your agent can run subagents or background tasks, run both in parallel while you start the interview. Otherwise, do a short pass yourself (about 6–8 searches each) before drafting. If you have no web access, ask the person for 2–3 job postings they like and use those as the research. Research every field fresh. Advice for designers does not transfer to nurses or sales leaders. Merge the findings into `playbook.md` and tell the person the few findings that change how you'll write.
 
 ### 3. Interview until you're about 98% sure
 
@@ -70,7 +70,7 @@ Run `scripts/check.py` on the rendered PDF, then walk the checklist in `referenc
 
 ### 6. Render and show
 
-Render with `scripts/render.py`. Send the PDF to the person, and summarise the changes in a before/after table.
+Render with `scripts/render.py`. Share the PDF with the person (attach it, open it, or give its path), and summarise the changes in a before/after table.
 
 ### 7. Iterate
 
@@ -97,6 +97,8 @@ Read `references/linkedin.md` and write `linkedin.md` to match the main variant.
 Finish with a table showing which file to use for which channel. If the folder is a git repo, offer to commit.
 
 ## Requirements
+
+- Any agent that can read files and run shell commands. Web access makes the research step much better.
 
 - Chrome, Chromium or Edge for rendering. `scripts/render.py` finds them automatically.
 - Python 3.
